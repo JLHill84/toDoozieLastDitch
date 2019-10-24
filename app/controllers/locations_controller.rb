@@ -5,6 +5,8 @@ class LocationsController < ApplicationController
   # GET /locations.json
   def index
     @locations = Location.all
+    @users = User.all
+    @todos = Todo.all
   end
 
   # GET /locations/1

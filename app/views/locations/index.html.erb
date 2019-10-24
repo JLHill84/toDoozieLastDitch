@@ -21,7 +21,7 @@
         <td><%= location.lat %></td>
         <td><%= location.lng %></td>
         <td><%= location.todo_id %></td>
-        <td><%= location.user_id %></td>
+        <td><%= @users.find_by_id(location.user_id).name %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>
         <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +32,7 @@
 
 <br>
 
-<%= link_to 'New Location', new_location_path %>
+<%= link_to 'New Location', new_location_path %><br>
+<%= link_to 'View Todos', todos_path%><br>
+<%= link_to 'View Users', users_path%><br>
+<a href='https://random-ize.com/random-website/#' target="_blank">Who knows?</a>
